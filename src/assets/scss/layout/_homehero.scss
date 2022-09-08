@@ -1,0 +1,128 @@
+.home-hero {
+  padding: 200px 0;
+  color: #fff;
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url(../../img/common-bg.svg);
+  background-position: center;
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .home-hero__content {
+      max-width: 80rem;
+      width: 100%;
+      h1 {
+        span {
+          font-size: 3rem;
+          color: #000;
+          font-weight: 600;
+        }
+        .text {
+          font-size: 6rem;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          color: #000;
+        }
+        color: $primary-color;
+        font-size: 6rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 2rem 0;
+        font-weight: 700;
+      }
+      p {
+        color: black;
+        font-size: 2.2rem;
+        line-height: 1.6;
+        width: 90%;
+        span {
+          color: $primary-color;
+        }
+      }
+      .btn {
+        margin-top: 5rem;
+        @include btn(2rem, 1.5rem 8rem);
+      }
+    }
+    .home-hero__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .outer-circle {
+        width: 36rem;
+        height: 36rem;
+        border: 1px solid $primary-color;
+        border-radius: 50%;
+        position: relative;
+        animation: move 30s linear infinite;
+        i {
+          font-size: 20px;
+          display: block;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          background: #fff;
+          color: $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 0 1rem $primary-light-color;
+          position: absolute;
+          &.child1 {
+            left: calc(50% - 2rem);
+            top: -2rem;
+          }
+          &.child2 {
+            right: -2rem;
+            top: calc(50% - 2rem);
+          }
+          &.child3 {
+            left: -2rem;
+            top: calc(50% - 2rem);
+          }
+          &.child4 {
+            bottom: -2rem;
+            left: calc(50% - 2rem);
+          }
+        }
+      }
+
+      .inner-circle {
+        position: absolute;
+        width: 28rem;
+        height: 28rem;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          background-position: center;
+        }
+      }
+    }
+  }
+  .home-hero__socials {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.23) 0 7px 29px 0;
+    padding: 0.5rem;
+    .home-hero__social {
+      width: 5rem;
+      .home-hero__social-icon-link {
+        text-align: center;
+        font-size: 3rem;
+        @include social-icon($primary-light-color);
+      }
+    }
+  }
+}

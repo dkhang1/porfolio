@@ -1,0 +1,61 @@
+$primary-color: #f24e1e;
+$primary-light-color: rgba(255, 99, 71, 0.4);
+
+// mixin - button
+@mixin btn($text-size, $padding) {
+  padding: $padding;
+  font-size: $text-size;
+  background: $primary-color;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.23);
+  transition: transform 0.3s;
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+@mixin navbar($hover-color) {
+  padding: 2.2rem 3rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: color 0.3s;
+  &:hover {
+    color: $hover-color;
+  }
+}
+@mixin social-icon($hover-bg-color) {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  transition: background 0.3s;
+  border-radius: 5px;
+  color: #000;
+  &:hover {
+    background: $hover-bg-color;
+  }
+}
+@mixin skill-box {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.6rem;
+  background: rgba(153, 153, 153, 0.2);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #666;
+}
+
+/// animation
+@keyframes move {
+  to {
+    transform: rotate(360deg);
+  }
+}

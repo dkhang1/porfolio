@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.23);
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    .header__logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &-sub {
+        padding-left: 2rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: color 0.3s;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    .header__navbar {
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .header__link {
+          @include navbar($primary-color);
+        }
+      }
+    }
+  }
+}

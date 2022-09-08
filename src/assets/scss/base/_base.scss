@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.5;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 120rem;
+  margin: auto;
+  width: 92%;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
